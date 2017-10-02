@@ -21,9 +21,9 @@
 пользователю об ошибке.
 */
 
-/////////////////////////////
-// Решение в терминах функции
-/////////////////////////////
+////////////////////////////////////////////
+// Решение в терминах функции задач 1 и 2 //
+///////////////////////////////////////////
 'use strict'
 function KavichkiReplace(sampleString, patternMatch, patternReplace) {
 	let sampleStringResult = sampleString.replace(patternMatch, patternReplace);
@@ -42,34 +42,3 @@ patternReplace = '" ';
 sampleStringResult = KavichkiReplace(sampleString, patternMatch, patternReplace);
 
 alert('вот что стало:  ' + sampleStringResult);
-
-
-/*
-////////////////////////////
-/*Решение в терминах ООП* (не зашёл :) )///
-///////////////////////////
-//задаём класс и его свойства
-function KavichkiReplaceClass() {
-	//шаблон поиска фиксированный для класса
-	this.patternMatch = '/\'/g';
-	//меняется только строка
-	this.sampleString = '';
-}
-//задаём метод класса
-KavichkiReplaceClass.prototype.sampleStringReplace = function () {
-	return this.sampleString;
-}
-//создаём экземпляр
-function KavichkiReplace (mySampleString) {
-	KavichkiReplaceClass.call(this);
-	this.sampleString = mySampleString;
-}
-// !!!! НЕПОНИМАЮ КАК ОБЪЯСНИТЬ СТРОКИ !!! 
-KavichkiReplace.prototype = object.create(KavichkiReplaceClass.prototype);
-KavichkiReplace.prototype.constructor = KavichkiReplace;
-//задаём метод прототипа
-KavichkiReplace.prototype.sampleStringReplace = function () {
-	var sampleStringVar = this.sampleString;
-	var sampleStringResult = sampleStringVar.replace(patternMatch, '"');
-	return sampleStringResult;
-}*/
